@@ -118,5 +118,44 @@
                 }
             }
         }
+        & #experiencias{
+            & h2{
+                font-size: 48px;
+            }
+            ul{
+                display:flex;
+                gap: 16px;
+                & li{
+                    flex: 1;
+                    padding: 12px;
+                    border-radius: 10px;
+                    & img{
+                        width: 100%;
+                        display: block;
+                        aspect-ratio: 1;
+                    }
+                    & h5{
+                        margin-top: 16px;
+                        font-size: 20px;
+                        color: #7CFFB0;
+                        & span{
+                            display: block;
+                            font-size: 14px;
+                            color: #FFFFFF;
+                        }
+                    }
+                    & h6{
+                        color: #FFFFFF;
+                        margin-top: 6px;
+                    }
+                    background-color: red;
+
+                }
+
+            }
+        }
+        & #projetos{
+
+        }
     }
 }
