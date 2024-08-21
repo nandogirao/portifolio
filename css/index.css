@@ -22,6 +22,7 @@
         height: 150px;
         background-color: red;
         border-radius: 50%;
+
     }
 
     & main {
@@ -51,15 +52,18 @@
                         padding-bottom: 6px;
                         position: relative;
                         transition-duration: 200ms;
+
                         &:hover {
                             color: red;
-                            &::after{
+
+                            &::after {
                                 width: 16px;
                                 left: calc(50% - 8px);
                                 opacity: 1;
                             }
                         }
-                        &::after{
+
+                        &::after {
                             content: "";
                             width: 0px;
                             height: 4px;
@@ -71,11 +75,12 @@
                             opacity: 0;
                             transition-duration: 200ms;
                         }
-                    
+
                     }
                 }
 
             }
+
             & ul {
                 display: flex;
                 gap: 16px;
@@ -95,67 +100,150 @@
                 }
             }
         }
-        & #sobre{
-            & h2{
+
+        & #sobre {
+            & h2 {
                 font-size: 48px;
                 margin-bottom: 26px;
             }
-                & p{
-                    width: 700px;
-                    font-size: 18px;
-                    margin-bottom: 16pxp
-                }
+
+            & p {
+                width: 700px;
+                font-size: 18px;
+                margin-bottom: 16pxp
+            }
         }
-        & #linguagens{
+
+        & #linguagens {
             margin-top: 100px;
-            & ul{
+
+            & ul {
                 display: flex;
                 gap: 16px;
-                & li{
+
+                & li {
                     flex: 1;
                     height: 100px;
                     background-color: red;
                 }
             }
         }
-        & #experiencias{
-            & h2{
+
+        & #experiencias {
+            & h2 {
                 font-size: 48px;
             }
-            ul{
-                display:flex;
+
+            ul {
+                display: flex;
                 gap: 16px;
-                & li{
+
+                & li {
                     flex: 1;
                     padding: 12px;
                     border-radius: 10px;
-                    & img{
+
+                    & img {
                         width: 100%;
                         display: block;
                         aspect-ratio: 1;
                     }
-                    & h5{
+
+                    & h5 {
                         margin-top: 16px;
                         font-size: 20px;
                         color: #7CFFB0;
-                        & span{
+
+                        & span {
                             display: block;
                             font-size: 14px;
                             color: #FFFFFF;
                         }
                     }
-                    & h6{
+
+                    & h6 {
                         color: #FFFFFF;
                         margin-top: 6px;
                     }
+
                     background-color: red;
 
                 }
 
             }
         }
-        & #projetos{
 
+        & #projetos {}
+    }
+}
+
+/* Tablet na Horizontal */
+@media only screen and (max-width: 1024px) {
+    #principal {
+        width: 100%;
+        padding: 60px;
+
+    }
+
+}
+
+/* Tablet na Vertical */
+@media only screen and (max-width: 768px) {
+    #principal {
+
+        flex-direction: column;
+        align-items: center;
+
+        & main {
+            & #topo {
+                flex-direction: column;
+                margin-bottom: 0;
+
+                & div {
+                    text-align: center;
+                }
+
+                & ul {
+                    justify-content: center;
+                    margin-bottom: 26px;
+                }
+            }
+            & #sobre {
+                & p {
+                    width: 100%;
+                }
+            }
         }
     }
+
+}
+
+/* Smarthphoes */
+@media only screen and (max-width: 600px) {
+    #principal {
+        padding: 16px;
+
+        & main {
+            & #topo {
+                & div {
+                    & h1 {
+                        font-size: 26px;
+                    }
+                }
+            }
+            & #linguagens{
+                 ul{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    & li{
+                        flex: initial;
+                    }
+                    
+                }
+            }
+
+            
+        }
+    }
+
 }
